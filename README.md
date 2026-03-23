@@ -1,30 +1,60 @@
-# SQL Injection Lab (DVWA)
+# 🔐 SQL Injection Lab (DVWA)
 
 ## 🔍 Description
-This project demonstrates SQL Injection attacks performed in a controlled lab environment using DVWA.
+This project demonstrates SQL Injection attacks performed in a controlled lab environment using DVWA (Damn Vulnerable Web Application).
 
-## 💉 What I Did
-- Performed SQL Injection on input fields
-- Bypassed authentication using payloads
-- Extracted user data from database
+SQL Injection is a vulnerability where user input is directly included in SQL queries, allowing attackers to manipulate database behavior. :contentReference[oaicite:1]{index=1}
 
-## ⚡ Payloads Used
-1' OR '1'='1  
-' OR 1=1 --
+---
+
+## ⚙️ Lab Setup
+- Tool: DVWA (Damn Vulnerable Web Application)
+- Environment: XAMPP (Apache + MySQL)
+- Security Level: Low
+
+---
+
+## 💉 Attack Performed
+
+### 🔹 Normal Query
+Input:
+1
+
+### 🔹 SQL Injection Payload
+' OR'a'='a
+
+👉 This bypasses authentication and returns all database records.
+
+---
 
 ## 📸 Screenshots
-![Injection](injection.png)  
+
+### Injection Input
+![Injection](injection.png)
+
+### Output Result
 ![Result](result.png)
 
-## 🛡️ Prevention Techniques
-- Input validation  
-- Prepared statements  
-- Parameterized queries  
+---
 
-## 🧠 Learning Outcome
-- Understood how SQL Injection works  
-- Learned how attackers exploit databases  
-- Studied secure coding practices  
+## 🧠 Explanation
+The payload `' OR'a'='a` always evaluates to TRUE, causing the database to return all records instead of a specific user.
+
+---
+
+## 🛡️ Prevention Techniques
+- Use Prepared Statements  
+- Input Validation  
+- Parameterized Queries  
+
+---
+
+## 📚 Learning Outcome
+- Understood SQL Injection vulnerability  
+- Learned authentication bypass techniques  
+- Explored secure coding practices  
+
+---
 
 ## ⚠️ Disclaimer
-This project was performed in a legal lab environment (DVWA) for educational purposes only.
+This project was performed in a controlled lab environment for educational purposes only.
