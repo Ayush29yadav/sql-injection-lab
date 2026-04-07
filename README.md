@@ -12,7 +12,7 @@ SQL Injection is a vulnerability where user input is directly included in SQL qu
 - Environment: XAMPP (Apache + MySQL)
 - Security Level: Low
 
----
+----
 
 ## 💉 Attack Performed
 
